@@ -5,6 +5,7 @@
 
 import argparse
 import time
+import logging
 import os
 import sys
 
@@ -20,7 +21,10 @@ def show_lines(vfd, lines, delay=DEFAULT_DELAY):
     If the line is wider than the display, it will be truncated.
     """
     display = [""]*LINES
-    for line in lines:
+    while True:
+        line = lines.readline()
+        if line == "":
+            break
         display.append(line.rstrip())
         display.pop(0)
         for i, d in enumerate(display):
