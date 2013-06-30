@@ -1,0 +1,21 @@
+=====
+PyLIS
+=====
+
+:Author: David Coles <coles.david@gmail.com>
+
+Introduction
+============
+This is a small Python library for interacting with the L.I.S. MCE LCD display
+manufactured by VLSystem <http://www.vlsys.co.kr/>.
+
+While the device appears as a USB Serial Device, unfortunately there's no
+official documentation on the protocol it uses. Thus the protocol has been mostly
+deciphered by looking at how the official application does it.
+
+Included are a few useful tools for interacting with the display.
+
+
+Dependencies
+============
+- pyserial
